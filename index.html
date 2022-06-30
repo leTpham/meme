@@ -6,34 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Tourney&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b444aea47f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<h1>Meme Generator</h1>
+<section>
+    <h1>Meme Generator</h1>
+    <h4>Fill out the form and make your own memes!</h4>
 
-<form id="meme-form">
-    <h2>Add Meme</h2>
-    <label>
-        Image URL:
-        <input type="url" name="imgUrl">
-    </label>
-    <br>
-    <label>
-        Text on Top:
-        <input name="topText">
-    </label>
-    <br>
-    <label>
-        Text On Bottom:
-        <input name="bottomText">
-    </label>
-    <button>Add Meme</button>
-</form>
+    <form id="meme-form">
+        <label>
+            Image URL:
+            <input type="url" name="imgUrl"></label>
+        <br>
+        <label>
+            Text on Top: 
+            <input name="topText"></label>
+        <br>
+        <label>
+            Text On Bottom: 
+            <input name="bottomText"></label>
+        <br>
+        <button>Add Meme</button>
+    </form>
+</section>
+
 <div id="memes">
-
-
-    
 </div>
-
 
 <script src="meme.js"></script>
 
