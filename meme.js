@@ -11,7 +11,7 @@ function showMemes() {
         let img = "<img src=\" " + meme.imgUrl +" \">";
         let topText = "<h3 class=topText>" + meme.topText + "</h3>";
         let bottomText = "<h3 class=bottomText>" + meme.bottomText + "</h3>";
-        let deleteButton = "<button id= \"delete-" + i + "\" class = \"del\">X</i></button>";
+        let deleteButton = "<button id= \"delete-" + i + "\" class = \"del\">🗑</i></button>";
         html +=
             "<div id=\" +i + \" class= \"meme\">" +"\n"
              + topText + "\n"
@@ -20,7 +20,6 @@ function showMemes() {
              + deleteButton 
             + "</div>";
     }
-
     memeArea.innerHTML = html;
 }
 
@@ -40,28 +39,17 @@ function handleSubmit(evt) {
     let topText = form.topText.value;
     let bottomText = form.bottomText.value;
     addMeme(imgUrl, topText, bottomText);
+    form.reset();
     showMemes();
 }
 
-function enterKey(evt) {
-    if (evt.key === "Enter"){
-    evt.preventDefault();
-
-    let form = document.getElementById('meme-form');
-    let imgUrl = form.imgUrl.value;
-    let topText = form.topText.value;
-    let bottomText = form.bottomText.value;
-    addMeme(imgUrl, topText, bottomText);
-    showMemes();}
-
-}
 function deleteMeme(id){
     memes.splice (id, 1);
 }
 
 function handleDelete(evt){
     if (evt.target.id.startsWith("delete-")){
-        let memeId = Number(evt.target.id.replace("delete-", ""));
+        let memeId = Number(evt.target.id.split("")[7]);
         deleteMeme(memeId);
     }
 showMemes();
@@ -71,5 +59,5 @@ showMemes();
 showMemes();
 
 document.getElementById("meme-form").addEventListener("submit", handleSubmit);
-document.getElementById("meme-form").addEventListener("keypress", enterKey);
+
 document.getElementById("memes").addEventListener("click", handleDelete);

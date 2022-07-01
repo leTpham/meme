@@ -45,23 +45,22 @@ button {
 
 .del {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
+    bottom: 0.2rem;
+    right: 0.2rem;
+    color:#fff;
     opacity: 10%;
-    background-color: rgba(176, 32, 32, 0.751);
-    font-size: 40px;
+    background-color: rgba(111, 101, 101, 0.379);
+    font-size: 25px;
     border:white 1px solid;
-    padding: 5px 5px;
-    margin: 1px 1px;
+    padding: 5px 8px;
+    margin: 5px 5px;
 
 }
 
 .meme {
     position: relative;
     display: inline-block;
-    margin: 10px;
+    margin: 20px 30px;
 }
 
 h3 {
@@ -73,7 +72,7 @@ h3 {
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
     margin: 3px 3px 3px 3px;
     text-overflow: string;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .topText {
@@ -81,14 +80,18 @@ h3 {
 }
 
 .bottomText {
-    bottom: 2px;
+    bottom: 4px;
 }
 
 img {
     height: 300px;
     width: auto ;
 }
+img:hover {
+    border: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
 
 .del:hover {
     opacity: 100%;
+    text-shadow:1px 1px 10px rgba(60, 24, 24, 0.3), 1px 1px 10px #ccc;
 }
