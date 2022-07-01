@@ -55,9 +55,7 @@ function handleDelete(evt){
 showMemes();
 }
 
-
 showMemes();
 
 document.getElementById("meme-form").addEventListener("submit", handleSubmit);
-
 document.getElementById("memes").addEventListener("click", handleDelete);
